@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeSuite]" parallel="tests">
+  <test thread-count="5" name="ChromeTest(failed)" parallel="tests">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.testng.Ecommerce.RadioButton1">
+        <methods>
+          <include name="RadioButtonTest"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.testng.Ecommerce.RadioButton1 -->
+      <class name="com.testng.Ecommerce.TC_001">
+        <methods>
+          <include name="startProcess"/>
+          <include name="amazon"/>
+          <include name="endProcess"/>
+        </methods>
+      </class> <!-- com.testng.Ecommerce.TC_001 -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="5" name="firefoxTest(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.testng.Ecommerce.TC_001">
+        <methods>
+          <include name="startProcess"/>
+          <include name="amazon"/>
+          <include name="endProcess"/>
+        </methods>
+      </class> <!-- com.testng.Ecommerce.TC_001 -->
+    </classes>
+  </test> <!-- firefoxTest(failed) -->
+</suite> <!-- Failed suite [SmokeSuite] -->

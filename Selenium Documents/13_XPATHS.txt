@@ -1,0 +1,110 @@
+Xpaths  --> 2 types
+
+1. Absolute Xpath  -- starts with "HTML" Tag
+2. Relative Xpath  -- starts with "//"
+
+By using below methods we can identify the elements uniquely.
+
+1) Single Attribute
+2) Multiple Attributes
+3) Parent Child Relationship
+4) Text()
+5) Starts-With()
+6) Contains()
+7) Ancestor
+8) Preceding Node
+9) Decendant
+10) Following Node
+
+
+1) Single attribute :
+   ------------------
+   
+    syntax : //tagname[@attribute1='value1']
+
+
+
+2) Multiple Attribute :
+   --------------------
+ 
+  syntax:
+         (//tagname[@attribute1='value1'])[1]
+         //tagname[@attribute1='value1'][@attribute2='value2']
+
+
+3. Parent Child Relationship :
+   ---------------------------
+
+   syntax :
+           //parenttagname[@parentattributename='value']/childtagname[@childattributename='value']
+
+   //a[@id='gb23']/span[1]
+
+
+
+***********************************************************************************
+				Xpath functions
+***********************************************************************************
+
+
+4. text()  ---> To locate links & labels ,function name is text()
+    //tagname[text()='text value']
+
+
+5. starts-with()  ---> 
+    //tagname[starts-with(text(),'starting value')]
+
+6. contains()  --->       
+   //tagname[contains(@attributename,'partial value')]
+   //tagname[contains(text(),'partial value')]
+
+
+ last()
+   //input[@id='b'][last()]
+   //input[@id='b'][last()-1]
+
+
+ position() --->  To locate element based on location we use this function
+   //input[@id='b'][position()=2]
+
+
+7) Ancestor :
+  -----------
+Selects all ancestors (parent,grandparent, etc) of the current node
+  
+    syntax : //div[@id='nav-xshop']//ancestor::div
+
+
+8) Preceding :
+   -----------
+Selects all nodes that appear before the current node in the document,except ancestors, attribute nodes and namespace nodes
+
+   syntax : //div[@id='nav-xshop']//preceding::div
+
+
+9) Descendant :
+   ------------
+Selects all descendants (children, grandchildren, etc..) of the current node.
+
+    syntax: //div[@id='nav-xshop']//descendant::a
+            //div[@id='gw-ftGr-desktop-tall-hero-I']//descendant::div
+
+
+10)  Following :
+     -----------
+
+Selects everything in the document after the closing tag of the curent node.
+
+     syntax : //div[@id='nav-xshop']//following::a
+
+
+
+***********************************************************************************
+              			Xpath Operators
+***********************************************************************************
+
+1. And
+2. OR
+
+
+
